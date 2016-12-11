@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="defaultMasterPage2.master.cs" Inherits="defaultMasterPage2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">    
+    <link href="StyleSheet2.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style4 {
+            height: 40px;
+            width: 82px;
+        }
+        .auto-style5 {
+            height: 40px;
+            width: 250px;
+        }
+        .auto-style6 {
+            width: 689px;
+            height: 40px;
+        }
+        .auto-style7 {
+            height: 40px;
+            width: 180px;
+        }
+        .auto-style8 {
+            width: 144px;
+        }
+        .auto-style12 {
+            height: 20px;
+            width: 144px;
+        }
+        .auto-style13 {
+            height: 28px;
+            width: 144px;
+        }
+        .auto-style14 {
+            height: 19px;
+            width: 144px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+   <div>
+    <table>
+        <tr>
+            <td class="auto-style7"></td>
+            <td class="auto-style5"><asp:Label runat="server" ID="lbl" Text="Welcome"></asp:Label>:</td>
+            <td class="auto-style4"><asp:Label runat="server" ID="lbluser"></asp:Label></td>
+            <td class="auto-style6"><asp:Button  runat="server" ID="btnlogout" Height="34px" style="margin-left: 551px" Text="Logout" Width="132px" OnClick="btnlogout_Click"/></td>
+        </tr>
+    </table>
+       <table style="margin-left: 180px">
+           <tr>
+               <td><ul><li><asp:LinkButton ID="lnkPersonalDetails" runat="server" PostBackUrl="~/Admin/ListPersonalDetails.aspx">Personal Details</asp:LinkButton></td>
+               <td><ul><li><asp:LinkButton ID="lnkSalaryDetails" runat="server" PostBackUrl="~/Admin/SalaryDetails.aspx">Salary Details</asp:LinkButton></li></ul></td>
+               <td><ul><li><asp:LinkButton ID="lnkPolicyDocument" runat="server" PostBackUrl="~/Admin/PolicyDocuments.aspx">Policy Document</asp:LinkButton></li></ul></td>
+               <td><ul><li><asp:LinkButton ID="lnkLeaveDetails" runat="server" PostBackUrl="~/Admin/LeaveDetails.aspx">Leave Details</asp:LinkButton></li></ul></td>
+               <td><ul><li><asp:LinkButton ID="lnkSchoolPortal" runat="server" PostBackUrl="~/Admin/SchoolPortal.aspx">School Portal</asp:LinkButton></li></ul></td>
+           </tr>
+       </table>
+       <table style="width: 180px; height: 166px; float:left;" id="rightnav" runat="server">
+           <tr>
+               <td class="auto-style14">
+                   <ul><li><asp:LinkButton ID="lnkHiring" runat="server">Hiring</asp:LinkButton>
+               </td>
+           </tr>
+           <tr>
+               <td class="auto-style14">
+                   <ul><li><asp:LinkButton ID="lnkTraitManagement" runat="server" PostBackUrl="~/Admin/TraitManagement.aspx">Trait Management</asp:LinkButton></li></ul>
+               </td>
+           </tr>
+           <tr>
+               <td class="auto-style14">
+                   <ul><li><asp:LinkButton ID="lnkAppraisalSystem" runat="server">Appraisal System</asp:LinkButton></li></ul>
+               </td>
+           </tr>
+           <tr>
+               <td class="auto-style14">
+                   <ul><li><asp:LinkButton ID="lnkTeachersPortal" runat="server" PostBackUrl="~/Admin/SchoolPortal.aspx">Teacher's Portal</asp:LinkButton></li></ul>
+               </td>
+           </tr>
+           
+       </table>
+       <table style="float:left; width: 1032px; height: 29px;">
+           <tr>
+               <td>
+
+                   <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                   </asp:ContentPlaceHolder>
+
+               </td>
+           </tr>
+       </table>
+   </div>
+        
+               
+    </form>
+</body>
+</html>
